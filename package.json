@@ -1,0 +1,33 @@
+{
+  "name": "e-commerce-order-notification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "npx nodemon src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js"
+  },
+  "keywords": [
+    "e-commerce",
+    "order-notification",
+    "telex integration",
+    "hng backend"
+  ],
+  "author": "Oyero Habibulah",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/express": "^4.17.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^3.1.9"
+  }
+}
