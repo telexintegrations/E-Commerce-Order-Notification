@@ -39,42 +39,44 @@ export const integrationSpecSettings = {
     },
     settings: [
       {
-        label: "interval",
-        type: "text",
-        required: true,
-        default: "* * * * *",
-      },
-      {
-        label: "Key",
-        type: "text",
-        required: true,
-        default: "1234567890",
-      },
-      {
-        label: "Do you want to continue",
+        label: "Enable Notifications",
         type: "checkbox",
         required: true,
-        default: "Yes",
+        default: true,
+        description:
+          "You can disable it, if you don't want mails to be sent to the receiver.",
       },
       {
-        label: "Provide Speed",
-        type: "number",
+        label: "Sender Email",
+        type: "text",
         required: true,
-        default: "1000",
+        default: "",
+        description:
+          "Email address to be used to send the mails. This is the email the receiver will see when a mail is sent to them. The email must be a gmail account as that is what is currently supported.",
       },
       {
-        label: "Sensitivity Level",
-        type: "dropdown",
+        label: "Receiver Email",
+        type: "text",
         required: true,
-        default: "Low",
-        options: ["High", "Low"],
+        default: "",
+        description:
+          "Email address to send notifications to. This is the email you want to receive the mails into.",
       },
       {
-        label: "Alert Admin",
-        type: "multi-checkbox",
+        label: "Email Subject",
+        type: "text",
         required: true,
-        default: "Super-Admin",
-        options: ["Super-Admin", "Admin", "Manager", "Developer"],
+        default: "",
+        description:
+          "This is the Subject/Title of the Mail you want to be displayed to the user",
+      },
+      {
+        label: "Email App Password",
+        type: "text",
+        required: true,
+        default: "",
+        description:
+          "This is the Password of the email you want to use to send mails, or the App Password. You can create it here, https://myaccount.google.com/security",
       },
     ],
     target_url: "https://0n7zbnfc-3000.uks1.devtunnels.ms/webhook",
