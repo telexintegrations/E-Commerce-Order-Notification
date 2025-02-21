@@ -28,7 +28,6 @@ app.post("/webhook", async (req: any, res: any) => {
   )?.default;
 
   if (!isNotificationEnabled) {
-    console.log("Notification is disabled, not sending mails...");
     return res.json({
       message: "Notification is Disabled, so, email functionality won't work",
     });
@@ -49,12 +48,6 @@ app.post("/webhook", async (req: any, res: any) => {
   const emailSubject = settings.find(
     (setting: { label: string }) => setting.label === "Email Subject"
   )?.default;
-
-  console.log("isNotificationEnabled", isNotificationEnabled);
-  console.log("senderEmail", senderEmail);
-  console.log("emailAppPassword", emailAppPassword);
-  console.log("receiverEmail", receiverEmail);
-  console.log("emailSubject", emailSubject);
 
   // Validate settings first
   if (!senderEmail || !receiverEmail || !emailSubject || !emailAppPassword) {
@@ -79,8 +72,6 @@ app.post("/webhook", async (req: any, res: any) => {
       .status(400)
       .json({ status: "error", message: "Message must contain order items." });
   }
-
-  console.log("message", parsedMessage);
 
   // Create a transporter for nodemailer
   const transporter = nodemailer.createTransport({
@@ -121,7 +112,6 @@ app.post("/webhook", async (req: any, res: any) => {
     console.log("Email sent: " + info.response);
     return res.json({ status: "success", message: "Email sent successfully" });
   } catch (error) {
-    console.log("Error sending email:", error);
     return res
       .status(500)
       .json({ status: "error", message: "Failed to send email" });
