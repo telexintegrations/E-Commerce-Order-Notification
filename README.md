@@ -25,6 +25,17 @@ To get a better understanding of how the E-commerce Order Notification applicati
 - TypeScript
 - CORS
 
+## Resources
+
+- [E-commerce React App](https://habib-hng-stage-2.netlify.app/) - This is the eCommerce React application that serves as our data source. It also has the Telex channel webhook integrated into it.
+- [GitHub Repository for the E-commerce App](https://github.com/oyerohabib/hng-stage-2) - This repository contains the source code for the eCommerce application.
+
+- [Checkout.jsx - Webhook Integration Implementation](https://github.com/oyerohabib/hng-stage-2/blob/main/src/Pages/Checkout.jsx) - This file shows the implementation of the webhook integration in the eCommerce app, located in line no 50.
+
+- [Integration Spec JSON for the Deployed App](https://e-commerce-order-notification.onrender.com/integration-spec) - This link provides the integration specifications in JSON format for the deployed application.
+
+- [Base URL for the Deployed App](https://e-commerce-order-notification.onrender.com/) - This is the base URL for accessing the deployed E-commerce Order Notification application.
+
 ## Installation
 
 ### Prerequisites
